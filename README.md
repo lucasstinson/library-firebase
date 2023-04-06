@@ -2,7 +2,7 @@
 
 This is an updated version of my library app that is using firebase.
 
-## Project: Memory Card
+## Project: Library
 
 The project is from The Odin Project [curriculum](https://www.theodinproject.com/lessons/javascript-using-baas-for-your-back-end)
 
