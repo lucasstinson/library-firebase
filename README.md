@@ -29,8 +29,9 @@ A **live preview** of the project is [here](https://lucasstinson.github.io/libra
 #### **Areas of Improvement:**
 
 - The application is on the simpler side and could have a few styling updates such as a toggleable darkmode.
-- There is no local storage implemeneted for offline users. Refreshing the page will destroy the library
-- The code is tightly coupled and should be refactored to clean up the code
+- There is no local storage implemeneted for offline users. Refreshing the page will destroy the library.
+- The code is tightly coupled and should be refactored to clean up the code.
+- The application is not mobile friendly.
 
 ### Assignment
 
