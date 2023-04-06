@@ -31,6 +31,7 @@ A **live preview** of the project is [here](https://lucasstinson.github.io/libra
 - The application is on the simpler side and could have a few styling updates such as a toggleable darkmode.
 - There is no local storage implemeneted for offline users. Refreshing the page will destroy the library.
 - The code is tightly coupled and should be refactored to clean up the code.
+- The password is not hidden when being typed.
 - The application is not mobile friendly.
 
 ### Assignment
