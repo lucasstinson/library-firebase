@@ -1,0 +1,421 @@
+/* 
+The colors should be welcoming. military green for "read" salmon for "unread"
+
+The actual background will be white like whitesmoke and maybe have a dark mode
+*/
+
+html {
+  box-sizing: border-box;
+  background-color: #f3f4f6;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 48px;
+  display: grid;
+  justify-content: center;
+}
+
+.account-setup-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.register,
+.sign-in,
+.sign-out {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 20px;
+  background-color: #444444;
+  color: white;
+}
+
+.register:hover,
+.sign-in:hover,
+.sign-out:hover {
+  opacity: 0.8;
+}
+
+.add-book-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+}
+.add-book {
+  border: none;
+  border-radius: 50%;
+  padding: 6px 16px;
+  font-weight: 700;
+  font-size: 32px;
+  background-color: #444444;
+  color: white;
+}
+
+.add-book:hover {
+  opacity: 0.8;
+  transform: scale(1.01);
+}
+
+.book-form {
+  visibility: hidden;
+  display: grid;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.book-form-active {
+  visibility: visible;
+  display: grid;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+form {
+  border-radius: 15px;
+  background-color: #ffc60b;
+  padding: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+li {
+  list-style-type: none;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.read {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+input[type="text"] {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+input[type="text"]:focus,
+input[type="text"]:hover {
+  border: 1px solid black;
+  outline: none;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+input[type="number"] {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+input[type="number"]:focus,
+input[type="number"]:hover {
+  border: 1px solid black;
+  outline: none;
+  border-radius: 10px;
+  padding: 8px;
+}
+/* 
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: 0.1s;
+  background-color: white;
+  border: 1px solid blue;
+}
+
+input[type="checkbox"]:checked {
+  background-color: green;
+} */
+
+#submit {
+  border: none;
+  border-radius: 15px;
+  padding: 8px 16px;
+  font-weight: 700;
+  background-color: #444444;
+  font-size: 16px;
+  color: white;
+}
+
+#submit:hover {
+  border: none;
+  border-radius: 15px;
+  padding: 8px 16px;
+  font-weight: 700;
+  background-color: #444444;
+  font-size: 16px;
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+.books-wrapper {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+  /* border: 1px solid red; */
+  gap: 50px;
+}
+
+.book {
+  display: grid;
+  gap: 10px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.title-wrapper,
+.author-wrapper,
+.page-wrapper,
+.read-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  font-weight: 600;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+}
+
+input:checked + .slider {
+  background-color: green;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px green;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+
+.title-wrapper {
+  font-weight: 700;
+  font-size: 20px;
+  background-color: #444444;
+  border-radius: 10px 10px 0px 0px;
+  color: white;
+}
+
+.delete-book-container {
+  display: grid;
+  align-items: center;
+}
+
+.delete-book {
+  border: none;
+  padding: 8px 16px;
+  font-weight: 700;
+  background-color: #ffc60b;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.delete-book:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+.sign-in-background {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  margin: 0;
+  border-radius: 0;
+}
+
+.sign-in-background-active {
+  visibility: visible;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  margin: 0;
+  border-radius: 0;
+}
+
+.sign-in-title {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.sign-in-form {
+  margin-top: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 35%;
+  margin-right: 35%;
+  border-radius: 15px;
+  background-color: #ffc60b;
+  padding: 20px;
+}
+
+.sign-in-form ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 10px;
+}
+
+.sign-in-form ul li {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.submit-sign-in {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 700;
+  background-color: #444444;
+  color: white;
+}
+
+.submit-sign-in:hover {
+  opacity: 0.8;
+}
+
+.register-background {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  margin: 0;
+  border-radius: 0;
+}
+
+.register-background-active {
+  visibility: visible;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  margin: 0;
+  border-radius: 0;
+}
+
+.register-title {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.register-form {
+  margin-top: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 35%;
+  margin-right: 35%;
+  border-radius: 15px;
+  background-color: #ffc60b;
+  padding: 20px;
+}
+
+.register-form ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 10px;
+}
+
+.register-form ul li {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.submit-register {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 700;
+  background-color: #444444;
+  color: white;
+}
+
+.submit-register:hover {
+  opacity: 0.8;
+}
+
+.account-loggedin-container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+}
