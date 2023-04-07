@@ -1,14 +1,8 @@
-/* 
-The colors should be welcoming. military green for "read" salmon for "unread"
-
-The actual background will be white like whitesmoke and maybe have a dark mode
-*/
-
 html {
   box-sizing: border-box;
   background-color: #f3f4f6;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 20px;
+  padding: 5px;
   height: 100%;
 }
 
@@ -21,8 +15,6 @@ html {
 .site-title {
   font-weight: 700;
   font-size: 48px;
-  display: grid;
-  justify-content: center;
 }
 
 .account-setup-container {
@@ -418,4 +410,157 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
+}
+
+/* @media (max-width: 600px) {
+} */
+
+@media screen and (max-width: 600px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 0px;
+    padding-bottom: 10px;
+  }
+
+  .site-title {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .account-setup-container {
+    gap: 10px;
+  }
+
+  .add-book-container {
+    padding-left: 10px;
+  }
+
+  .add-book {
+    border: none;
+    border-radius: 50%;
+    padding: 5px 15px;
+    font-weight: 700;
+    font-size: 24px;
+    background-color: #444444;
+    color: white;
+  }
+
+  .register,
+  .sign-in,
+  .sign-out {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 0;
+    font-size: 16px;
+    background-color: #444444;
+    color: white;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: #ffc60b;
+    padding: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .read {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-right: 35px;
+  }
+
+  li #submit {
+    margin-right: 25px;
+  }
+
+  .sign-in-form,
+  .register-form {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1020px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 0px;
+    padding-bottom: 10px;
+  }
+
+  .site-title {
+    text-align: center;
+    font-size: 24px;
+  }
+
+  .add-book-container {
+    padding-left: 0px;
+  }
+  .add-book {
+    border: none;
+    border-radius: 50%;
+    padding: 5px 15px;
+    font-weight: 700;
+    font-size: 24px;
+    background-color: #444444;
+    color: white;
+  }
+  .register,
+  .sign-in,
+  .sign-out {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 0;
+    font-size: 16px;
+    background-color: #444444;
+    color: white;
+  }
+
+  form {
+    display: flex;
+    border-radius: 15px;
+    justify-content: start;
+    align-items: center;
+    background-color: #ffc60b;
+    padding-right: 10px;
+    padding-left: 0;
+    margin: 0px;
+  }
+
+  ul {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 0px;
+    padding-left: 10px;
+  }
+
+  input {
+    width: 130px;
+  }
+
+  .read {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
 }
