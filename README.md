@@ -15,6 +15,7 @@ A **live preview** of the project is [here](https://lucasstinson.github.io/libra
 - A user has the ability to add, delete or update the read status on their books.
 - Authentication and storage has been implemented with Firebase.
 - A user can register an account with a simple email and password and store their entries online;
+- Mobile Friendly!
 
 #### **Tools:**
 
@@ -32,7 +33,6 @@ A **live preview** of the project is [here](https://lucasstinson.github.io/libra
 - There is no local storage implemeneted for offline users. Refreshing the page will destroy the library.
 - The code is tightly coupled and should be refactored to clean up the code.
 - The password is not hidden when being typed.
-- The application is not mobile friendly.
 
 ### Assignment
 
