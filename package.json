@@ -19,7 +19,7 @@
     "webpack-cli": "^5.0.1"
   },
   "dependencies": {
-    "firebase": "^9.19.1",
+    "firebase": "^12.14.0",
     "protobufjs": "^7.2.4"
   }
 }
